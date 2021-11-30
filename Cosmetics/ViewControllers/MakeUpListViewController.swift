@@ -11,10 +11,7 @@ class MakeUpListViewController: UITableViewController {
 
     @IBOutlet var activitiIndicator: UIActivityIndicatorView!
     
-    var makeUps: MakeUp = []
-    
-    let link = "https://makeup-api.herokuapp.com/api/v1/products.json"
-    
+    private var makeUps: MakeUp = []
     private var filtredMakeUps = [MakeUpElement]()
     private let searchController = UISearchController(searchResultsController: nil)
     private var searchBarIsEmpty: Bool {
@@ -34,7 +31,7 @@ class MakeUpListViewController: UITableViewController {
         
         tableView.rowHeight = 100
         
-        fetchMakeUp()
+        fetchMakeUp(from: Link.cosmetics.rawValue)
         
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
@@ -82,27 +79,12 @@ class MakeUpListViewController: UITableViewController {
             detailsVC.dataMakeUp = makeUp
         }
     }
-}
-
-extension MakeUpListViewController {
-    func fetchMakeUp() {
-        guard let url = URL(string: link) else { return }
-        
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data = data else {
-                print(error?.localizedDescription ?? "No eror description")
-                return
-            }
-            do {
-                self.makeUps = try JSONDecoder().decode(MakeUp.self, from: data)
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                    self.activitiIndicator.stopAnimating()
-                }
-            } catch let error {
-                print(error.localizedDescription)
-            }
-        }.resume()
+    
+    private func fetchMakeUp(from url: String?) {
+        NetworkManager.shared.fetchMakeUp(from: url) { makeUps in
+            self.makeUps = makeUps
+            self.tableView.reloadData()
+        }
     }
 }
 

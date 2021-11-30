@@ -16,6 +16,7 @@
 		EA356EF927562B2D00026247 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA356EF827562B2D00026247 /* NetworkManager.swift */; };
 		EA356EFB27562BBB00026247 /* MakeUpListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA356EFA27562BBB00026247 /* MakeUpListViewController.swift */; };
 		EA356EFD27562CC800026247 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA356EFC27562CC800026247 /* DetailViewController.swift */; };
+		EA356F042756337D00026247 /* Cosmetics.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA356F032756337D00026247 /* Cosmetics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		EA356EF827562B2D00026247 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		EA356EFA27562BBB00026247 /* MakeUpListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeUpListViewController.swift; sourceTree = "<group>"; };
 		EA356EFC27562CC800026247 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		EA356F032756337D00026247 /* Cosmetics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cosmetics.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,18 +64,75 @@
 		EA356EDF2756282900026247 /* Cosmetics */ = {
 			isa = PBXGroup;
 			children = (
-				EA356EE02756282900026247 /* AppDelegate.swift */,
-				EA356EE22756282900026247 /* SceneDelegate.swift */,
-				EA356EF42756288D00026247 /* Main.storyboard */,
-				EA356EFC27562CC800026247 /* DetailViewController.swift */,
-				EA356EF627562ABE00026247 /* CustomTableViewCell.swift */,
-				EA356EF827562B2D00026247 /* NetworkManager.swift */,
-				EA356EFA27562BBB00026247 /* MakeUpListViewController.swift */,
-				EA356EE92756282A00026247 /* Assets.xcassets */,
-				EA356EEB2756282A00026247 /* LaunchScreen.storyboard */,
-				EA356EEE2756282A00026247 /* Info.plist */,
+				EA356F022756330C00026247 /* SupportingFiles */,
+				EA356F062756339700026247 /* Services */,
+				EA356F052756338300026247 /* Models */,
+				EA356F01275632F900026247 /* Views */,
+				EA356EFE275632B200026247 /* ViewControllers */,
+				EA356EFF275632CB00026247 /* Storyboards */,
+				EA356F00275632DD00026247 /* Sourse */,
 			);
 			path = Cosmetics;
+			sourceTree = "<group>";
+		};
+		EA356EFE275632B200026247 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EA356EFA27562BBB00026247 /* MakeUpListViewController.swift */,
+				EA356EFC27562CC800026247 /* DetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EA356EFF275632CB00026247 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				EA356EF42756288D00026247 /* Main.storyboard */,
+				EA356EEB2756282A00026247 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		EA356F00275632DD00026247 /* Sourse */ = {
+			isa = PBXGroup;
+			children = (
+				EA356EE92756282A00026247 /* Assets.xcassets */,
+			);
+			path = Sourse;
+			sourceTree = "<group>";
+		};
+		EA356F01275632F900026247 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA356EF627562ABE00026247 /* CustomTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EA356F022756330C00026247 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				EA356EE02756282900026247 /* AppDelegate.swift */,
+				EA356EE22756282900026247 /* SceneDelegate.swift */,
+				EA356EEE2756282A00026247 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		EA356F052756338300026247 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EA356F032756337D00026247 /* Cosmetics.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EA356F062756339700026247 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EA356EF827562B2D00026247 /* NetworkManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +210,7 @@
 				EA356EE12756282900026247 /* AppDelegate.swift in Sources */,
 				EA356EF727562ABE00026247 /* CustomTableViewCell.swift in Sources */,
 				EA356EFD27562CC800026247 /* DetailViewController.swift in Sources */,
+				EA356F042756337D00026247 /* Cosmetics.swift in Sources */,
 				EA356EFB27562BBB00026247 /* MakeUpListViewController.swift in Sources */,
 				EA356EE32756282900026247 /* SceneDelegate.swift in Sources */,
 			);
@@ -295,7 +355,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2V3Q6RCHJL;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Cosmetics/Info.plist;
+				INFOPLIST_FILE = Cosmetics/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -323,7 +383,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2V3Q6RCHJL;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Cosmetics/Info.plist;
+				INFOPLIST_FILE = Cosmetics/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
